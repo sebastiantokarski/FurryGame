@@ -185,7 +185,7 @@ Game.prototype.keyboard = function (event) {
 
 Game.prototype.parseVh = function (val) {
     return ((val / 65 * 100) * 70) / 100;
-}
+};
 
 Game.prototype.enterKey = function (event) {
     if (event.keyCode === 13) {
@@ -264,7 +264,7 @@ Game.prototype.addProp = function (el, index) {
     el.dataset.score = this.scoreElement.innerHTML;
     el.dataset.time = this.timerElement.innerHTML;
     el.innerHTML = el.dataset.position + '. ' + el.dataset.score + ' points in ' + el.dataset.time + ' sec';
-}
+};
 
 Game.prototype.render = function () {
 
@@ -322,6 +322,9 @@ Game.prototype.playAgain = function () {
 //------------------------------------------DOMContentLoaded------------------------------------------//
 document.addEventListener('DOMContentLoaded', function () {
 
-    var game = new Game();
+    setTimeout(function () {
+        var game = new Game();
+    }, 500);
+
 
 });
